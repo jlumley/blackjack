@@ -5,6 +5,7 @@ import java.util.Random;
 public class Deck {
 	
 	Card [] deckList;
+	int top = 0;
 	
 	public Deck() {
 		// TODO Auto-generated constructor stub
@@ -26,7 +27,7 @@ public class Deck {
 			System.out.println(card.name + " " + card.suit);
 		}
 	}
-	
+
 	public void shuffle_deck() {
 		Random random = new Random();
 		Card temp;
@@ -37,6 +38,19 @@ public class Deck {
 			this.deckList[i] = temp;
 		}
 		
+	}
+	
+	public void deal(Player human, Player dealer) {
+		human.addCard(this.deckList[this.top]);
+		this.top++;
+		dealer.addCard(this.deckList[this.top]);
+		this.deckList[this.top].setHiddenStatus(true);
+		this.top++;
+		human.addCard(this.deckList[this.top]);
+		this.top++;
+		dealer.addCard(this.deckList[this.top]);
+		this.top++;
+			
 	}
 	
 }
