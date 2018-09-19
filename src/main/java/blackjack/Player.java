@@ -12,8 +12,7 @@ public class Player {
 	int numberOfCards = 0;
 	int points;
 	boolean didWin;
-	boolean hasAce = false;
-	
+	boolean hasAce = false;	
 
 	public Player(boolean isDealer) {
 		// TODO Auto-generated constructor stub
@@ -130,6 +129,8 @@ public class Player {
 		}
 		this.hand[numberOfCards] = card;
 		this.numberOfCards += 1;
+		
+		card.checkPlayedCards();
 	}
 	
 	public void setPoints(int points) {
