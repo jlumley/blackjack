@@ -165,5 +165,20 @@ public class PlayerTest extends TestCase{
 		
 	}
 
+	public void testDealingCards() {
+		Deck deck = new Deck();
+		Player p1 = new Player(false);
+		Player p2 = new Player(true);
+		
+		deck.deal(p1, p2);
+		
+		p1.calculatePoints();
+		p2.calculatePoints();
+		assertEquals(14, p1.points);
+		assertEquals(6, p2.points);
+		
+		p1.print_cards(false);
+		p2.print_cards(true);
+	}
 	
 }

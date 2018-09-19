@@ -6,7 +6,7 @@ import junit.framework.TestCase;
 
 public class GameTest extends TestCase {
 	
-	public void testPlayGame() {
+	public void testPlayGameWithFileInput() {
 		Player p1 = new Player(false);
 		Player p2 = new Player(true);
 		Scanner scanner = new Scanner(System.in);
