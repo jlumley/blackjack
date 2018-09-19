@@ -17,10 +17,9 @@ public class Card {
 		this.name = name;
 		this.value = this.setValue();
 		this.verifyCard();
-		this.checkPlayedCards();
 		
 	}
-	
+
 	private void verifyCard() {
 		Set<String> validSuits = new HashSet<String>();
 		validSuits.add("H");
