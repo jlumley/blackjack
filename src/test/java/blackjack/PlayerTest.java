@@ -172,6 +172,17 @@ public class PlayerTest extends TestCase{
 		
 		assertEquals(12, p3.points);
 		
+		Player p4 = new Player(false);
+		Card [] hand3 = new Card[6];
+		hand3[0] = new Card("H", "A");
+		hand3[1] = new Card("C", "K");
+		hand3[2] = new Card("S", "A");
+		hand3[3] = new Card("D", "7");
+		p4.numberOfCards = 3;
+		p4.setCards(hand3);
+		p4.calculatePoints();
+		
+		assertEquals(19, p4.points);
 		
 	}
 
