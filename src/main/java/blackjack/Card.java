@@ -6,6 +6,7 @@ public class Card {
 	String suit;
 	String name;
 	int value;
+	boolean hidden = false;
 	
 	public Card(String suit, String name) {
 		// TODO Auto-generated constructor stub
@@ -27,8 +28,12 @@ public class Card {
 		}
 		return Integer.parseInt(this.name);
 	}
-	
+
 	public void setValue(int value) {
 		this.value = value;
+	}
+	
+	public void setHiddenStatus(boolean hidden) {
+		this.hidden = hidden;
 	}
 }
